@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>JIRA Time Tracker Plus</title>
+    <link rel="stylesheet" type="text/css" href="styles/site.css" />
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script src="scripts/moment.js"></script>
+    <script src="scripts/jira-api.js"></script>
+    <script src="scripts/popup.js"></script>
+</head>
+<body>
+    <span class="projects-select">
+        <span id="project-name">Project:</span>
+        <select id="project-names">
+        </select>
+    </span>
+    <span class="issues-select">
+        <span id="issue-name">Issue:</span>
+        <select id="issue-names">
+        </select>
+    </span>
+	<br />
+	<br />
+    <div id="table-container">
+        <table id="jira-log-time-table">
+            <thead>
+                <tr>
+                    <th width="5%">ID</th>
+                    <th width="30%">Description</th>
+                    <th width="5%">Total</th>
+                    <th width="2%">Log time</th>
+                    <th width="2%">Log time</th>
+                    <th width="5%" style="overflow:hidden;">Status</th>
+                    <th width="10%">Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="loader-container">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <div id="paging" class="paging" style="display:none;">
+        <span id="prev" class="next_prev font16" data-direction="prev" data-page-index="1">&lt;</span>
+        <span id="page_number" class="font16">1</span>
+        <span class="font16">from</span>
+        <span id="total_pages" class="font16">1</span>
+        <span id="next" class="next_prev font16" data-direction="next" data-page-index="1">&gt;</span>
+    </div>
+
+    <div id="error"></div>
+
+    <div id="brand">
+        <div id="logo">
+            <img src="images/icon48.png"/>
+            <span class="extension-name">JIRA Time Tracker Plus</span>
+        </div>
+        <div id="switch-display">
+            <div>Display by:</div>
+            <group class="inline-radio">
+                <div><input type="radio" name="displayType" value="project"><label>Project</label></div>
+                <div><input type="radio" name="displayType" value="issue"><label>Issue</label></div>
+            </group>
+        </div>
+        <div id="nav">
+            <a href="options.html" tabindex="1">Options</a>
+        </div>
+    </div>
+</body>
+</html>

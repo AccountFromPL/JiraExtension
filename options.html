@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JIRA Time Tracker</title>
+	<link rel="stylesheet" type="text/css" href="styles\options.css" />
+</head>
+
+<body>
+
+	<table>
+		<tr>
+			<td>
+				URL       
+			</td>
+			<td>
+				<input id="baseUrl" type="text" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				REST Api Extension
+			</td>
+			<td>
+				<input id="apiExtension" type="text" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Username
+			</td>
+			<td>
+				<input id="username" type="text" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Password       
+			</td>
+			<td>
+				<input id="password" type="password" />
+			</td>
+		</tr>
+        <tr>
+            <td>
+                number of items on page
+            </td>
+            <td>
+                <input id="itemsOnPage" type="text" />
+            </td>
+        </tr>
+		<tr>
+			<td>
+				JQL
+			</td>
+			<td>
+				<input id="jql" type="text" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Default display by
+			</td>
+			<td>
+				<span class="radios-displayType">
+					<span>
+						<input type="radio" name="displayType" value="project" checked> Project
+					</span>
+					<span>
+						<input type="radio" name="displayType" value="issue"> Issue
+					</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table class="group">
+					<th>
+					Display by Project
+					</th>
+					<tr>
+						<td>
+							Project keys <br/> Comma separated
+						</td>
+						<td>
+							<textarea type="text" id="projects"></textarea>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table class="group">
+					<th>
+					Display by Parent Issue
+					</th>
+					<tr>
+						<td>
+							Issue (story, task etc.) keys <br/> Comma separated
+						</td>
+						<td>
+							<textarea type="text" id="issues"></textarea>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<div id="status"></div>
+
+	<button id="save" class="btn">Save</button>
+
+	<script src="scripts\options.js"></script>
+
+</body>
+</html>
